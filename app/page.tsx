@@ -199,7 +199,10 @@ export default function Home() {
               {content.ekip.map((member, i) => (
                 <div key={i} className="flex flex-col items-center max-w-sm">
                   <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden mb-8 border border-black/5 p-2 bg-white/5">
-                    <img src={member.img} alt={member.name} className="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-700" />
+<img
+  src={member.img}
+  className="w-full h-full object-cover rounded-full transition-all duration-700"
+/>
                   </div>
                   <h3 className={`${theme.title} text-2xl font-light uppercase tracking-wider mb-2`}>{member.name}</h3>
                   <p className={`${theme.subtitle} text-xs font-bold uppercase tracking-widest mb-6`}>{member.role}</p>
