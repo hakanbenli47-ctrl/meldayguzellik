@@ -86,8 +86,8 @@ export default function Home() {
           </motion.p>
           
           <motion.h1 variants={fadeInUp} className={`${theme.title} text-5xl md:text-7xl lg:text-8xl font-light mb-6 tracking-tight leading-tight`}>
-            Güzelliğinize <br />
-            <span className="font-serif italic text-4xl md:text-6xl lg:text-7xl">Değer Katıyoruz</span>
+            Sadece saç değil,<br />
+            <span className="font-serif italic text-4xl md:text-6xl lg:text-7xl">Özgüven tasarlıyoruz.</span>
           </motion.h1>
 
           <motion.p variants={fadeInUp} className={`${theme.subtitle} max-w-2xl mx-auto text-base md:text-lg font-light leading-relaxed mb-10`}>
@@ -129,8 +129,8 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-black/5 pt-16">
             {[
-              { count: "13+", label: "Yıllık Tecrübe" },
-              { count: "5000+", label: "Mutlu Müşteri" },
+              { count: "4+", label: "Yıllık Tecrübe" },
+              { count: "2000+", label: "Mutlu Müşteri" },
               { count: "20+", label: "Özel Hizmet" },
               { count: "100%", label: "Memnuniyet" }
             ].map((stat, i) => (
@@ -222,9 +222,20 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: "Elif A.", comment: "Düğünüm için gelin başımı yaptırdım ve sonuç inanılmazdı! Her detay özenle düşünüldü, kendimi çok özel hissettim." },
-              { name: "Seda K.", comment: "Saçımı boyattım ve rengi tam istediğim gibi oldu. Kullanılan ürünler çok kaliteliydi, saçım hiç yıpranmadı." },
-              { name: "Derya M.", comment: "İlk kez saç kesimi yaptırdım ve sonuç harikaydı. Tam yüz hatlarıma uygun harika bir modern kesim uyguladılar." }
+            
+  {
+    name: "Ayşe T.",
+    comment: "Saç kesimi ve bakım için geldim, gerçekten beklentimin çok üstündeydi. Hem ilgi hem sonuç mükemmeldi, artık sürekli buradayım."
+  },
+  {
+    name: "Zeynep Y.",
+    comment: "Saç boyama işlemi yaptırdım, renk tam istediğim gibi oldu. Hiç yıpranma olmadı, çok profesyonel bir ekip."
+  },
+  {
+    name: "Merve Ç.",
+    comment: "Gelin saçı ve makyaj için tercih ettim, sonuç inanılmazdı. Tüm gün bozulmadan kaldı, herkesten övgü aldım."
+  }
+
             ].map((item, i) => (
               <motion.div key={i} whileHover={{ y: -5 }} className={`${theme.card} p-10 flex flex-col justify-between border-none shadow-sm`}>
                 <div className="flex text-yellow-500 mb-6">
@@ -274,7 +285,7 @@ export default function Home() {
                 WhatsApp İle Ulaşın <span className="ml-2">↗</span>
               </a>
               <a 
-  href="https://maps.app.goo.gl/Y8anTCsEbc7DGK7q9?g_st=ic" 
+  href="https://share.google/nHquCdqXn77C4ytqc" 
   target="_blank" 
   rel="noreferrer"
   className="group text-xs uppercase font-bold tracking-widest flex items-center gap-2 transition"
@@ -287,24 +298,24 @@ export default function Home() {
 </span>
 </a>
             <a 
-  href="https://instagram.com/kutaysuofficial" 
+  href="https://www.instagram.com/meldaaayyy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
   target="_blank" 
   className="group text-[11px] font-bold tracking-widest flex items-center gap-2 transition"
 >
   <FaInstagram className="text-base transition-transform duration-300 group-hover:scale-110 group-hover:text-pink-500" />
   <span className="group-hover:translate-x-1 transition-transform duration-300">
-    KUTAY SU
+    Melda Ay
   </span>
 </a>
 
 <a 
-  href="https://instagram.com/service_hair_repair" 
+  href="https://www.instagram.com/meldayguzellik?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
   target="_blank" 
   className="group text-[11px] font-bold tracking-widest flex items-center gap-2 transition"
 >
   <FaInstagram className="text-base transition-transform duration-300 group-hover:scale-110 group-hover:text-pink-500" />
   <span className="group-hover:translate-x-1 transition-transform duration-300">
-    STUDIO
+    Meldayguzellık
   </span>
 </a>
             </div>

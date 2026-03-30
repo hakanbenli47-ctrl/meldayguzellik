@@ -18,7 +18,25 @@
     --foreground: #ededed;
   }
 }
-
+@keyframes goldFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at 20% 20%, rgba(255, 215, 0, 0.08), transparent 40%),
+              radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.05), transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes purpleWave {
+  0% { background-position: 0% 50%, 0% 50%; }
+  50% { background-position: 100% 50%, 100% 50%; }
+  100% { background-position: 0% 50%, 0% 50%; }
+}
 body {
   background: var(--background);
   color: var(--foreground);
