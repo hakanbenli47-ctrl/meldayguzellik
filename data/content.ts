@@ -55,7 +55,7 @@ export const content = {
     },
     {
       title: " kişiye özel saç reklendirme servisleri ",
-      desc: "Hydrafacial, Saç Analizi, anti-aging uygulamalar.",
+      desc: "Saçınıza en yakışan rengi birlikte belirliyor, sağlıklı ve uzun ömürlü sonuçlar elde etmenizi sağlıyoruz.",
       img: "/cilt.jpg",
     },
     {
