@@ -1,12 +1,12 @@
 export const content = {
   salon: {
-  shortName: "Melday",
-   name: "Melday Güzellik",
-  slogan: "Mersin'in en güvenilir ve modern güzellik deneyimi.",
-  phone: "905467150455",       // sadece arama için
-  whatsapp: "905467150455",   // WhatsApp için
-  location: "Mersin – Türkiye",
-  copyright: "© 2026 Melda Güzellik",
+  shortName: "Abdullah Çam",
+   name: "Abdullah Çam Hair",
+  slogan: "Antalya'nın en güvenilir ve modern güzellik deneyimi.",
+  phone: "905051151180",       // sadece arama için
+  whatsapp: "905051151180",   // WhatsApp için
+  location: "Antalya – Türkiye",
+  copyright: "© 2026 Abdullah Çam Hair",
 },
 
   links: {
@@ -88,10 +88,10 @@ export const content = {
   /* 3 ÇALIŞAN */
  ekip: [
   {
-    name: "Melda Ay",
+    name: "Abdullah Çam",
     role: "İşletme Sahibi & Saç Tasarım Uzmanı",
     img: "/person1.jpg",  // public klasörüne ekle
-    bio: "Melda Ay, 4 yıldır saç tasarımı ve güzellik sektöründe uzmanlaşmış bir profesyoneldir. Modern teknikler ve kişiye özel çözümlerle müşterilerine eşsiz deneyimler sunar. İzmir’de birçok başarılı projeye imza atmış ve sektörde kendini kanıtlamış bir isimdir."
+    bio: "abdullah Çam, 9 yıldır saç tasarımı ve güzellik sektöründe uzmanlaşmış bir profesyoneldir. Modern teknikler ve kişiye özel çözümlerle müşterilerine eşsiz deneyimler sunar. İzmir’de birçok başarılı projeye imza atmış ve sektörde kendini kanıtlamış bir isimdir."
   }
 ],
 

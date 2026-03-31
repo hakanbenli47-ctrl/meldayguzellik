@@ -129,8 +129,8 @@ export default function Home() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center border-t border-black/5 pt-16">
             {[
-              { count: "4+", label: "Yıllık Tecrübe" },
-              { count: "2000+", label: "Mutlu Müşteri" },
+              { count: "9+", label: "Yıllık Tecrübe" },
+              { count: "3000+", label: "Mutlu Müşteri" },
               { count: "20+", label: "Özel Hizmet" },
               { count: "100%", label: "Memnuniyet" }
             ].map((stat, i) => (
@@ -287,38 +287,18 @@ export default function Home() {
               <a href={`https://wa.me/${content.salon.whatsapp}`} target="_blank" rel="noreferrer" className="text-xs uppercase font-bold tracking-widest hover:opacity-60 transition flex items-center">
                 WhatsApp İle Ulaşın <span className="ml-2">↗</span>
               </a>
-              <a 
-  href="https://share.google/nHquCdqXn77C4ytqc" 
-  target="_blank" 
-  rel="noreferrer"
-  className="group text-xs uppercase font-bold tracking-widest flex items-center gap-2 transition"
->
+           
+           
 
-  <FaMapMarkerAlt className="text-sm transition-transform duration-300 group-hover:scale-110 group-hover:text-red-500" />
-
-<span className="group-hover:translate-x-1 transition-transform duration-300">
-  Haritada Aç
-</span>
-</a>
-            <a 
-  href="https://www.instagram.com/meldaaayyy?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
-  target="_blank" 
-  className="group text-[11px] font-bold tracking-widest flex items-center gap-2 transition"
->
-  <FaInstagram className="text-base transition-transform duration-300 group-hover:scale-110 group-hover:text-pink-500" />
-  <span className="group-hover:translate-x-1 transition-transform duration-300">
-    Melda Ay
-  </span>
-</a>
 
 <a 
-  href="https://www.instagram.com/meldayguzellik?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
+  href="https://www.instagram.com/abdullah_camm?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" 
   target="_blank" 
   className="group text-[11px] font-bold tracking-widest flex items-center gap-2 transition"
 >
   <FaInstagram className="text-base transition-transform duration-300 group-hover:scale-110 group-hover:text-pink-500" />
   <span className="group-hover:translate-x-1 transition-transform duration-300">
-    Meldayguzellık
+    abdullah_camm
   </span>
 </a>
             </div>

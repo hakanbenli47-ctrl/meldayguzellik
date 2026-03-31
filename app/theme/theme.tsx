@@ -192,7 +192,7 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | null>(null)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [activeTheme, setActiveTheme] = useState<ThemeType>("purple")
+  const [activeTheme, setActiveTheme] = useState<ThemeType>("gold")
 
   useEffect(() => {
     const stored = localStorage.getItem("theme") as ThemeType | null
