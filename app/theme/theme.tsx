@@ -21,6 +21,7 @@ type ThemeSchema = {
   card: string
   input: string
   soft: string
+  accentText: string
   button: string
   danger: string
   heroText: string
@@ -53,6 +54,7 @@ const themes: Record<ThemeType, ThemeSchema> = {
     button: "bg-[#c2185b] hover:bg-[#a3154c] text-white",
     danger: "bg-red-500/70 text-white cursor-not-allowed",
     heroText: "text-white",
+    accentText: "bg-gradient-to-r from-[#c2185b] to-[#ff6b9a]",
     heroCard: "bg-white border border-[#ead6dd] shadow-xl",
     title: "text-gray-900",
     subtitle: "text-gray-500",
@@ -79,6 +81,7 @@ const themes: Record<ThemeType, ThemeSchema> = {
     heroText: "text-white",
     heroCard: "bg-zinc-900 border border-zinc-800 shadow-xl",
     title: "text-white",
+    accentText: "bg-gradient-to-r from-yellow-400 to-yellow-200",
     subtitle: "text-white/50",
     headerBg: "bg-black",
     headerText: "text-white",
@@ -95,7 +98,7 @@ const themes: Record<ThemeType, ThemeSchema> = {
 
   gold: {
   bg: "min-h-screen bg-[#0b0b0b] text-white",
-
+accentText: "bg-gradient-to-r from-yellow-400 to-yellow-200",
   card: "bg-[#111111] border border-white/10 backdrop-blur-md",
   input: "bg-[#111111] border border-white/10 text-white placeholder-white/40 focus:border-yellow-400",
 
@@ -136,6 +139,7 @@ const themes: Record<ThemeType, ThemeSchema> = {
     button: "bg-yellow-500 hover:bg-yellow-600 text-black",
     danger: "bg-red-600/60 text-white cursor-not-allowed",
     heroText: "text-white",
+    accentText: "bg-gradient-to-r from-yellow-500 to-yellow-300",
     heroCard: "bg-zinc-900 border border-yellow-500/20 shadow-xl",
     title: "text-yellow-400",
     subtitle: "text-white/60",
@@ -155,7 +159,7 @@ const themes: Record<ThemeType, ThemeSchema> = {
   /* 🔥 MOR TEMA */
   purple: {
     bg: "min-h-screen text-white bg-gradient-to-br from-[#1e1633] via-[#2a1f4d] to-[#1e1633] bg-[length:200%_200%] animate-[purpleWave_12s_ease_infinite]",
-    
+    accentText: "bg-gradient-to-r from-purple-400 to-pink-400",
     card: "bg-[#1a132b] border border-purple-500/20 shadow-2xl",
     input: "bg-[#1a132b] border border-purple-500/30 text-white placeholder-white/40 focus:border-purple-400",
 
@@ -203,7 +207,7 @@ type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | null>(null)
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [activeTheme, setActiveTheme] = useState<ThemeType>("gold")
+  const [activeTheme, setActiveTheme] = useState<ThemeType>("pink")
 
   useEffect(() => {
     const stored = localStorage.getItem("theme") as ThemeType | null

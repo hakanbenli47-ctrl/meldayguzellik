@@ -17,19 +17,18 @@ function Header() {
 
   return (
     <header className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      scrolled ? `${theme.headerBg} shadow-[0_10px_40px_rgba(0,0,0,0.6)] py-4` : "bg-transparent py-6"
+      scrolled ? `${theme.headerBg} shadow-xl py-4` : "bg-transparent py-6"
     }`}>
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 md:px-12">
-        <div>
-          <span className={`${theme.title} text-lg tracking-widest`}>
-            {content.salon.shortName}
-          </span>
-        </div>
+        
+        <span className={`${theme.title} text-lg tracking-widest`}>
+          {content.salon.shortName}
+        </span>
 
         <nav className="hidden md:flex gap-8 text-xs uppercase tracking-widest">
-          <a href="#hizmetler">Hizmetler</a>
-          <a href="#hakkimizda">Hakkımızda</a>
-          <a href="#ekip">Ekip</a>
+          <a href="#hizmetler" className={theme.link}>Hizmetler</a>
+          <a href="#hakkimizda" className={theme.link}>Hakkımızda</a>
+          <a href="#ekip" className={theme.link}>Ekip</a>
         </nav>
 
         <a href={`tel:${content.salon.phone}`} className={`${theme.button} px-6 py-2`}>
@@ -49,36 +48,39 @@ export default function Home() {
       <Header />
 
       {/* HERO */}
-      <section className="relative min-h-screen flex items-center px-6 md:px-16 pt-32 overflow-hidden">
+      <section className="relative min-h-screen flex items-center px-6 md:px-12 pt-32 overflow-hidden">
 
-        {/* LIGHT EFFECT */}
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/2 w-[900px] h-[900px] -translate-x-1/2 -translate-y-1/2 bg-yellow-400/10 blur-[140px] rounded-full" />
+        {/* Glow */}
+        <div className="absolute inset-0 flex justify-center items-center">
+          <div className={`${theme.accentLine} opacity-10 blur-[140px] w-[800px] h-[800px] rounded-full`} />
         </div>
 
-        <div className="max-w-6xl w-full relative z-10">
+        <div className="max-w-7xl mx-auto w-full relative z-10">
           <p className={`${theme.subtitle} text-xs tracking-[0.4em] mb-6`}>
             {content.salon.location}
           </p>
 
           <h1 className={`${theme.title} text-5xl md:text-7xl font-light leading-[1.05]`}>
-            <span className="block text-white/80">
-              Sadece saç değil,
-            </span>
-            <span className="block mt-4 text-yellow-400 italic font-serif text-4xl md:text-6xl drop-shadow-[0_0_20px_rgba(255,215,0,0.2)]">
-              Özgüven tasarlıyoruz.
-            </span>
-          </h1>
+
+  <span className={`block ${theme.subtitle} opacity-80`}>
+    Sadece saç değil,
+  </span>
+
+  <span className={`block mt-4 italic font-serif text-4xl md:text-6xl bg-clip-text text-transparent ${theme.accentText}`}>
+    Özgüven tasarlıyoruz.
+  </span>
+
+</h1>
 
           <p className={`${theme.subtitle} mt-8 max-w-md`}>
             {content.salon.slogan}
           </p>
 
           <div className="flex gap-4 mt-10 flex-wrap">
-            <a href={`tel:${content.salon.phone}`} className={`${theme.button} px-8 py-4 shadow-[0_10px_30px_rgba(255,215,0,0.2)] hover:scale-105 transition`}>
+            <a href={`tel:${content.salon.phone}`} className={`${theme.button} px-8 py-4`}>
               Ara
             </a>
-            <a href={`https://wa.me/${content.salon.whatsapp}`} className={`${theme.soft} px-8 py-4`}>
+            <a href={`https://wa.me/${content.salon.whatsapp}`} className="px-8 py-4 bg-gradient-to-r from-[#fbe4ec] to-[#f6d3df] text-[#c2185b] hover:from-[#f6d3df] hover:to-[#efc2d2] transition shadow-sm hover:shadow-md">
               WhatsApp
             </a>
           </div>
@@ -86,61 +88,110 @@ export default function Home() {
       </section>
 
       {/* HAKKIMIZDA */}
-      <section id="hakkimizda" className={`${theme.sectionSoft} py-24 px-6 md:px-16`}>
-        <h2 className={`${theme.title} text-3xl font-serif italic mb-6`}>
-          Kendinize Vakit Ayırın
-        </h2>
-        <p className={`${theme.subtitle} max-w-2xl`}>
-          Modern dokunuşlar, profesyonel ekipmanlar ve alanında uzman kadromuzla saçınıza ve cildinize en uygun bakımı sunuyoruz.
+   {/* HAKKIMIZDA */}
+<section id="hakkimizda" className={`${theme.sectionSoft} py-28 px-6 md:px-16 relative overflow-hidden`}>
+
+  {/* glow */}
+  <div className={`absolute right-0 top-0 w-[400px] h-[400px] ${theme.accentLine} opacity-10 blur-[120px] rounded-full`} />
+
+  <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+
+    {/* SOL */}
+    <div>
+      <div className={`w-16 h-[2px] ${theme.accentLine} mb-6`} />
+
+      <h2 className={`${theme.title} text-3xl md:text-4xl font-serif italic mb-6 leading-snug`}>
+        Kendinize Vakit Ayırın
+      </h2>
+
+      <p className={`${theme.subtitle} max-w-md leading-relaxed`}>
+        Modern teknikler, kişiye özel analiz ve profesyonel dokunuşlarla
+        saçınıza en uygun uygulamayı sunuyoruz.
+      </p>
+
+      <div className="mt-8">
+        <a
+          href={`https://wa.me/${content.salon.whatsapp}`}
+          className={`${theme.button} px-6 py-3 text-sm`}
+        >
+          Ücretsiz Danış
+        </a>
+      </div>
+    </div>
+
+    {/* SAĞ BLOK */}
+    <div className="relative">
+      <div className={`${theme.card} p-10 h-[300px] flex items-center justify-center text-center`}>
+        <p className={`${theme.subtitle} text-sm leading-relaxed`}>
+          Kişiye özel analiz<br />
+          +<br />
+          Profesyonel dokunuş<br />
+          =<br />
+          Fark yaratan sonuç
         </p>
-      </section>
+      </div>
+
+      <div className={`absolute -bottom-6 -left-6 w-24 h-24 ${theme.accentLine} opacity-20 rounded-full blur-xl`} />
+    </div>
+
+  </div>
+</section>
 
       {/* HİZMETLER */}
       <section id="hizmetler" className={`${theme.sectionAlt} py-32 px-6 md:px-16`}>
         <h2 className={`${theme.title} text-4xl mb-20`}>
-          Güzellik <span className="text-yellow-400 italic">Menüsü</span>
+          Güzellik <span className={`${theme.link} italic`}>Menüsü</span>
         </h2>
 
         <div className="grid md:grid-cols-2 gap-10">
           {content.hizmetler.map((item, i) => (
-            <div key={i} className={`${theme.card} p-8 transition-all duration-300 hover:border-yellow-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)]`}>
-              <span className="text-yellow-400 text-xs">0{i+1}</span>
-              <h3 className={`${theme.title} text-xl mt-4 mb-2`}>{item.title}</h3>
-              <p className={`${theme.subtitle} text-sm`}>{item.desc}</p>
+            <div key={i} className={`${theme.card} p-8 transition-all duration-300 hover:-translate-y-2`}>
+              <span className={`${theme.link} text-xs`}>0{i+1}</span>
+              <h3 className={`${theme.title} text-xl mt-4 mb-2`}>
+                {item.title}
+              </h3>
+              <p className={`${theme.subtitle} text-sm`}>
+                {item.desc}
+              </p>
             </div>
           ))}
         </div>
+
+        {/* CTA */}
         <div className="mt-20 text-center">
+          <p className={`${theme.subtitle} mb-6`}>
+            Size en uygun hizmeti birlikte belirleyelim
+          </p>
 
-  <p className={`${theme.subtitle} mb-6`}>
-    Size en uygun hizmeti birlikte belirleyelim
-  </p>
-
-  <a
-    href={`https://wa.me/${content.salon.whatsapp}`}
-    target="_blank"
-    className="inline-block bg-yellow-400 text-black px-10 py-4 text-xs tracking-widest uppercase hover:scale-105 transition shadow-[0_10px_30px_rgba(255,215,0,0.2)]"
-  >
-    Hemen Randevu Oluştur
-  </a>
-
-</div>
+          <a
+            href={`https://wa.me/${content.salon.whatsapp}`}
+            target="_blank"
+            className={`${theme.button} px-10 py-4`}
+          >
+            Hemen Randevu Oluştur
+          </a>
+        </div>
       </section>
 
       {/* EKİP */}
       <section id="ekip" className="py-32 px-6 md:px-16">
         <h2 className={`${theme.title} text-4xl mb-20`}>
-          İşletme <span className="italic text-yellow-400">Sahibi</span>
+          İşletme <span className={`${theme.link} italic`}>Sahibi</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-10">
           {content.ekip.map((item, i) => (
-            <div key={i} className="group">
+            <div key={i}>
               <div className="overflow-hidden">
-                <img src={item.img} className="w-full h-[300px] object-cover mb-6 grayscale group-hover:grayscale-0 group-hover:scale-105 transition duration-500" />
+                <img
+                  src={item.img}
+                  className="w-full h-[300px] object-cover mb-6 grayscale hover:grayscale-0 hover:scale-105 transition duration-500"
+                />
               </div>
-              <h3 className={`${theme.title}`}>{item.name}</h3>
+
+              <h3 className={theme.title}>{item.name}</h3>
               <p className={`${theme.subtitle} text-sm`}>{item.role}</p>
+
               <p className={`${theme.subtitle} text-sm mt-4 italic`}>
                 "{item.bio}"
               </p>
@@ -150,70 +201,74 @@ export default function Home() {
       </section>
 
       {/* YORUMLAR */}
-      <section id="yorumlar" className={`${theme.sectionSoft} py-32 px-6 md:px-16`}>
+      <section className={`${theme.sectionSoft} py-32 px-6 md:px-16`}>
         <h2 className={`${theme.title} text-4xl mb-20`}>
-          Sizden <span className="italic text-yellow-400">Gelenler</span>
+          Sizden <span className={`${theme.link} italic`}>Gelenler</span>
         </h2>
 
         <div className="grid md:grid-cols-3 gap-10">
           {[
             {
               name: "Ayşe T.",
-              comment: "Saç kesimi ve bakım için geldim, gerçekten beklentimin çok üstündeydi. Hem ilgi hem sonuç mükemmeldi."
+              comment: "Beklentimin çok üstündeydi."
             },
             {
               name: "Zeynep Y.",
-              comment: "Saç boyama işlemi yaptırdım, renk tam istediğim gibi oldu. Çok profesyonel bir ekip."
+              comment: "Renk tam istediğim gibi oldu."
             },
             {
               name: "Merve Ç.",
-              comment: "Gelin saçı ve makyaj için tercih ettim, sonuç inanılmazdı. Herkesten övgü aldım."
+              comment: "Herkesten övgü aldım."
             }
           ].map((item, i) => (
-            <div key={i} className={`${theme.card} p-8 transition hover:-translate-y-2 hover:shadow-xl`}>
-              <p className={`${theme.subtitle} italic`}>"{item.comment}"</p>
-              <span className="block mt-4 text-yellow-400">{item.name}</span>
+            <div key={i} className={`${theme.card} p-8`}>
+              <p className={`${theme.subtitle} italic`}>
+                "{item.comment}"
+              </p>
+              <span className={`block mt-4 ${theme.link}`}>
+                {item.name}
+              </span>
             </div>
           ))}
         </div>
       </section>
-<section className="py-24 px-6 text-center">
 
-  <h2 className={`${theme.title} text-3xl md:text-4xl mb-6`}>
-    Değişime Hazır Mısınız?
-  </h2>
+      {/* ALT CTA */}
+      <section className="py-24 px-6 text-center">
+        <h2 className={`${theme.title} text-3xl md:text-4xl mb-6`}>
+          Değişime Hazır Mısınız?
+        </h2>
 
-  <p className={`${theme.subtitle} mb-10`}>
-    Size en uygun saç tasarımını birlikte belirleyelim.
-  </p>
+        <p className={`${theme.subtitle} mb-10`}>
+          Size en uygun saç tasarımını birlikte belirleyelim.
+        </p>
 
-  <div className="flex justify-center gap-4 flex-wrap">
-    <a
-      href={`tel:${content.salon.phone}`}
-      className={`${theme.button} px-8 py-4`}
-    >
-      Ara
-    </a>
+        <div className="flex justify-center gap-4 flex-wrap">
+          <a href={`tel:${content.salon.phone}`} className={`${theme.button} px-8 py-4`}>
+            Ara
+          </a>
 
-    <a
-      href={`https://wa.me/${content.salon.whatsapp}`}
-      className="bg-yellow-400 text-black px-8 py-4 hover:scale-105 transition"
-    >
-      WhatsApp
-    </a>
-  </div>
+          <a href={`https://wa.me/${content.salon.whatsapp}`} className={`${theme.soft} px-8 py-4`}>
+            WhatsApp
+          </a>
+        </div>
+      </section>
 
-</section>
       {/* FOOTER */}
       <footer className={`${theme.footerBg} py-20 px-6 text-center`}>
-        <h3 className="text-2xl mb-4">{content.salon.shortName}</h3>
-        <p className={`${theme.subtitle} mb-6`}>{content.salon.slogan}</p>
+        <h3 className="text-2xl mb-4 text-white/90">{content.salon.shortName}</h3>
 
-        <a href="#" className="flex justify-center items-center gap-2 text-white/60 hover:text-white">
-          <FaInstagram /> abdullah_camm
+        <p className={`${theme.subtitle} mb-6`}>
+          {content.salon.slogan}
+        </p>
+
+        <a href="#" className={`${theme.subtitle} flex justify-center items-center gap-2`}>
+          <FaInstagram /> instagram
         </a>
 
-        <p className="text-white/30 text-xs mt-10">{content.salon.copyright}</p>
+        <p className={`${theme.subtitle} text-xs mt-10`}>
+          {content.salon.copyright}
+        </p>
       </footer>
 
     </main>
