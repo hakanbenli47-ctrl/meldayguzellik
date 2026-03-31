@@ -1,6 +1,6 @@
 export const content = {
   salon: {
-  shortName: "Abdullah Çam",
+  shortName: "Abdullah Çam Hair",
    name: "Abdullah Çam Hair",
   slogan: "Antalya'nın en güvenilir ve modern güzellik deneyimi.",
   phone: "905051151180",       // sadece arama için
@@ -55,7 +55,7 @@ export const content = {
     },
     {
       title: " kişiye özel saç reklendirme servisleri ",
-      desc: "Hydrafacial, leke bakımı, anti-aging uygulamalar.",
+      desc: "Hydrafacial, Saç Analizi, anti-aging uygulamalar.",
       img: "/cilt.jpg",
     },
     {

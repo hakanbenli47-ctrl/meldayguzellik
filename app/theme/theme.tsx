@@ -94,29 +94,40 @@ const themes: Record<ThemeType, ThemeSchema> = {
   },
 
   gold: {
-    bg: "min-h-screen bg-[#f6f1e7] text-gray-900",
-    card: "bg-white border border-yellow-200 shadow-2xl",
-    input: "bg-white border border-yellow-300 text-gray-900 placeholder-gray-400 focus:border-[#b78b2e]",
-    soft: "bg-yellow-100 hover:bg-yellow-200 text-gray-800",
-    button: "bg-[#b78b2e] hover:bg-[#9c7425] text-white",
-    danger: "bg-red-500/70 text-white cursor-not-allowed",
-    heroText: "text-white",
-    heroCard: "bg-white border border-yellow-200 shadow-xl",
-    title: "bg-gradient-to-r from-[#b78b2e] via-[#e5c76b] to-[#a67c1b] bg-clip-text text-transparent",
-    subtitle: "text-[#8c6b1f]",
-    headerBg: "bg-white",
-    headerText: "text-gray-900",
-    heroOverlay: "bg-black/50",
-    sectionAlt: "bg-[#f6f1e7]",
-    sectionSoft: "bg-[#efe6d3]",
-    ctaBg: "bg-[#b78b2e]",
-    ctaText: "text-white",
-    footerBg: "bg-[#1a1a1a]",
-    footerText: "text-white",
-    link: "text-[#b78b2e] hover:text-[#9c7425]",
-    accentLine: "bg-[#b78b2e]"
-  },
+  bg: "min-h-screen bg-[#0b0b0b] text-white",
 
+  card: "bg-[#111111] border border-white/10 backdrop-blur-md",
+  input: "bg-[#111111] border border-white/10 text-white placeholder-white/40 focus:border-yellow-400",
+
+  soft: "bg-white/5 hover:bg-white/10 text-white",
+  button: "bg-yellow-400 text-black hover:bg-yellow-300",
+
+  danger: "bg-red-600/60 text-white",
+
+  heroText: "text-white",
+  heroCard: "bg-[#111111] border border-white/10",
+
+  title: "text-white",
+  subtitle: "text-white/50",
+
+  headerBg: "bg-black/70 backdrop-blur-md",
+  headerText: "text-white",
+
+  heroOverlay: "bg-black/60",
+
+  sectionAlt: "bg-[#0f0f0f]",
+  sectionSoft: "bg-[#121212]",
+
+  ctaBg: "bg-yellow-400",
+  ctaText: "text-black",
+
+  footerBg: "bg-black",
+  footerText: "text-white/60",
+
+  link: "text-yellow-400 hover:text-yellow-300",
+
+  accentLine: "bg-yellow-400"
+},
   darkGold: {
     bg: "min-h-screen text-white bg-black bg-[linear-gradient(45deg,#111111_25%,transparent_25%),linear-gradient(-45deg,#111111_25%,transparent_25%),linear-gradient(45deg,transparent_75%,#111111_75%),linear-gradient(-45deg,transparent_75%,#111111_75%)] bg-[size:40px_40px] bg-[position:0_0,0_20px,20px_-20px,-20px_0px]",
     card: "bg-zinc-900 border border-yellow-500/20 shadow-2xl",
